@@ -58,13 +58,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="labuhanjkung.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="pantaimandiri.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
             <img src="krui6.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="krui9.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="krui8.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -232,5 +232,32 @@
     <p>&copy; 2025 Pariwisata Pesisir Barat • Dibuat dengan ❤️ oleh Tim Web</p>
   </footer>
   
+  <!-- Audio musik -->
+ <audio id="bgmusic" loop>
+  <source src="pwsbar2.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Tombol musik ON/OFF -->
+<button id="music-button" onclick="toggleMusic()">🎵 Putar Musik</button>
+
+<script>
+  const audio = document.getElementById('bgmusic');
+  const button = document.getElementById('music-button');
+  let isPlaying = false;
+
+  function toggleMusic() {
+    if (!isPlaying) {
+      
+      audio.play();
+      isPlaying = true;
+      button.innerHTML = "🔇 Matikan Musik";
+    } else {
+      audio.pause();
+      isPlaying = false;
+      button.innerHTML = "🎵 Putar Musik";
+    }
+  }
+</script>
 </body>
 </html>
